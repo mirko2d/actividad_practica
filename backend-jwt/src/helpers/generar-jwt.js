@@ -1,12 +1,11 @@
 import jwt from 'jsonwebtoken';
-import { SECRET_KEY } from '../config/env.js';
-
-export default ( userId ) => {
+import { variablesBd } from '../config/config.js';
+export function  generarJwt( userId ) {
     return new Promise( ( resolve, reject ) => {
 
         const payload = { userId };
-        jwt.sign( payload, SECRET_KEY, {
-            expiresIn: '4h'
+        jwt.sign( payload, variablesBd.SECRET_KEY, {
+            expiresIn: '5h'
         }, ( error, token ) => {
             if ( error ) {
                 console.log( error );
