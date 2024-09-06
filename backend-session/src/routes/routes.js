@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { login, session, logout, register } from "../controllers/controllers.js";
+import { login, session, logout, register } from "../controllers/auth.controllers.js";
 export const sessionRoutes = Router()
 
 sessionRoutes.post('/login', login );
