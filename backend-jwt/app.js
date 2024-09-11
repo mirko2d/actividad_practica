@@ -17,10 +17,10 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
-    secret: variablesBd.SECRET_SESSION, // Cambia esto por una clave secreta en producción
-    resave: false,
+    secret: variablesBd.SECRET_SESSION, 
+        resave: false,
     saveUninitialized: true,
-    cookie: { secure: false } // Usar 'true' si usas HTTPS
+    cookie: { secure: false } 
 }));
 
 // Endpoint de inicio de sesión (login)
