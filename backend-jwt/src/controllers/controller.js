@@ -1,6 +1,5 @@
 import { newConnection } from "../db/database.js";
 import { generarJwt } from "../helpers/generar-jwt.js";
-
 export async function login(req, res) {
   const { username, password } = req.body;
   

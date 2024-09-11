@@ -1,6 +1,5 @@
 import mysql2  from "mysql2/promise"
 import { variablesBd } from "../config/config.js";
-
 export async function newConnection (){
     const connection = await mysql2.createConnection({
         host: variablesBd.DB_HOST,
