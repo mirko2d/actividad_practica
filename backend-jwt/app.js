@@ -17,8 +17,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(session({
-    secret: variablesBd.SECRET_SESSION, 
-        resave: false,
+    secret: variablesBd.SECRET_SESSION,     resave: false,
     saveUninitialized: true,
     cookie: { secure: false } 
 }));
